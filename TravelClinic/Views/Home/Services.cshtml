@@ -1,0 +1,194 @@
+﻿@{
+    ViewBag.Title = "Home Controller";
+}
+
+@Styles.Render("~/Content/normalize.css")
+@Styles.Render("~/Content/foundation.css")
+@Styles.Render("~/Content/local.css")
+
+<div class="row contain">
+    <div class="large-12 columns">
+        <div class="row" style="padding-top:15px">
+            <div class="show-for-medium-up large-6 columns">
+                <a href="index.php"><img src="http://uoflvaccinesandtravel.com/images/logo.png" alt="logo" /> </a>
+                <p>
+                    <span class="subheader">VACCINE AND INTERNATIONAL TRAVEL CENTER</span>
+                </p>
+            </div>
+            <div class="show-for-medium-up large-6 columns">
+                <p class="subheader" style="text-align:right">
+                    Vaccine and International Travel Center<br />
+                    Located in the 550 Clinic<br />
+                    550 S. Jackson Street<br />
+                    Ambulatory Care Building, 2nd Floor<br />
+                    Louisville, KY  40202<br />
+                    502-562-2822
+                </p>
+            </div>
+            <div class="large-12 columns redbordertop">
+                </br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns show-for-small-only">
+                <nav class="top-bar" data-topbar>
+                    <!-- Title Area -->
+                    <ul class="title-area">
+                        <li class="name"><h1><a href="index.php">Home</a></h1></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            <div class="show-for-medium-up large-3 columns redborder textright">
+                <ul class="no-bullet" id="nav">
+                    <li> @Html.ActionLink("Home", "Home", "Home") </li>
+                    <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                    <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                    <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                    <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                    <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                    <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                    <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                    <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                </ul>
+                <div class="row">
+                    <div class="large-12 large-centered columns">
+                        <hr style="color:#ad0000;" />
+                    </div>
+                </div>
+                <ul class="vcard" style="color: #666; border:none;text-align:center;">
+                    <li style="margin-bottom:10px">Hours</li>
+                    <li><p style="text-align:left; display:inline">M-F:</p> 8:30AM - 4:30PM</li>
+                    <li><p style="text-align:left; display:inline">Sat-Sun:</p> Closed</li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--end header -->
+            <!--services.php-->
+            <div class="large-9 columns redborder2">
+                <div class="large-12 columns textcenter tabtitle" style="margin-bottom:25px">
+                    <h1>Services</h1>
+                </div>
+                <div class="row">
+                    <div class="large-7 large-centered columns" style="margin-bottom:25px">
+                        <img height="310px" width="440px" src="http://uoflvaccinesandtravel.com/images/Travelgroup.jpg" alt="Travel Group" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-8 small-12 small-centered large-centered columns" style="margin-bottom:25px">
+                        <h6 class="textcenter">Our team of specialists are trained to fulfill all your illness prevention needs.</h6>
+                    </div>
+                </div>
+                <div class="enlargefont">
+                    <p class="justify">
+                        At the Vaccine and International Travel Center, our focus is on the prevention of illness.  This occurs through a variety of activities including Pre-travel, In-travel, and Post-travel services.  Our goal is to prepare you for travel, provide access to our specialists in the event you need information during your travel, and to provide care as needed after you return home.  This comprehensive approach is what sets us apart from other travel health providers.
+                        <br /><br />
+                        Whether you are in need of routine immunization, or if you are traveling for business, pleasure, mission work, disaster relief, or adoption activities, we are here to serve you.
+                        </br></br>
+                    <p class="justify ">
+                        All new clients, as well as those who have not been seen in the Center for the past year, will need to provide a health history. Click the link below to view and print the health history.
+                        Children under the age of 18 must be acommpanied by a parent or guardian and <b>must bring a copy of their current immunization certificate.</b></br></br>
+                        <a href="http://uoflvaccinesandtravel.com/PatientHealthQuestionnaire.docx">Health History Form</a></br></br>
+                    </p>
+                    <div class="span-16 boldtext">We provide Immunization for the following vaccine-preventable diseases: </div>
+
+                    <div class="span-7">
+                        </br>
+                        <ul>
+                            <li>Hepatitis A</li>
+                            <li>Hepatatis B</li>
+                            <li>Human Papillomavirus(HPV)</li>
+                            <li>Influenza</li>
+                            <li>Japanese Encephalitis</li>
+                            <li>Measles-Mumps-Rubella</li>
+                            <li>Meningococcus</li>
+                        </ul>
+                    </div>
+                    <div class="span-7">
+                        </br>
+                        <ul>
+                            <li>Pneumococcus</li>
+                            <li>Poliomyelitis</li>
+                            <li>Rabies</li>
+                            <li>Shingles</li>
+                            <li>Tetanus/Diphtheria/Pertussis</li>
+                            <li>Typhoid</li>
+                            <li>Yellow Fever</li>
+                            <li>Varicella</li>
+                        </ul>
+                    </div>
+                    <div class="span-16">
+
+                        <div class="boldtext">
+                            </br>We can provide confirmation of immunity following vaccination
+                            or infection for the following vaccine-preventable diseases:
+                        </div>
+                        </br>
+                        <ul>
+                            <li>Hepatitis A</li>
+                            <li>Hepatatis B</li>
+                            <li>Measles-Mumps-Rubella</li>
+                            <li>Varicella</li>
+                        </ul>
+
+                        <div class="boldtext">Additional services include:</div>
+                        <br />
+                        <ul>
+                            <li>Access to specialists during your travel</li>
+                            <li>Access to specialists after you return from your travel</li>
+                            <li>Tuberculosis skin testing</li>
+                            <li>Tuberculosis blood assay testing</li>
+                            <li>HIV testing</li>
+                            <li>Blood typing</li>
+                            <li>Evaluation post-travel</li>
+                        </ul>
+                        <p class="justify">
+                            If you are in need of immigration physical examinations and immunizations requiring a Civil Surgeon, Healthcare personnel immunization programs and program evaluation can be provided on site or in our Vaccine Center.
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <div class="textcenter">
+                    <a href="http://uoflvaccinesandtravel.com/surgeon.php" class='button'>More About Civil Surgeon</a>
+
+                </div>
+                <!--services.php-->
+                <!-- Footer -->
+            </div>
+        </div>
+        <div class="large-12 columns height-half"></div>
+        <div class="large-12 columns redbordertop2">
+            <div class="quiet textcenter">&copy; 2011-2013 University of Louisville, Division of Infectious Diseases. All Rights Reserved.</div>
+
+            <div class="subheader textcenter">
+                Vaccine and International Travel Center<br />
+                Located in the 550 Clinic<br />
+                550 S. Jackson Street<br />
+                Ambulatory Care Building, 2nd Floor <br />
+                Louisville, KY  40202<br />
+                502-562-2822
+            </div>
+        </div>
+    </div>
+

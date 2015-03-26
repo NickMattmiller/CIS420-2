@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "Home Controller";
+}
+
+@Styles.Render("~/Content/normalize.css")
+@Styles.Render("~/Content/foundation.css")
+@Styles.Render("~/Content/local.css")
+
+<div class="row contain">
+    <div class="large-12 columns">
+        <div class="row" style="padding-top:15px">
+            <div class="show-for-medium-up large-6 columns">
+                <a href="index.php"><img src="http://uoflvaccinesandtravel.com/images/logo.png" alt="logo" /> </a>
+                <p>
+                    <span class="subheader">VACCINE AND INTERNATIONAL TRAVEL CENTER</span>
+                </p>
+            </div>
+            <div class="show-for-medium-up large-6 columns">
+                <p class="subheader" style="text-align:right">
+                    Vaccine and International Travel Center<br />
+                    Located in the 550 Clinic<br />
+                    550 S. Jackson Street<br />
+                    Ambulatory Care Building, 2nd Floor<br />
+                    Louisville, KY  40202<br />
+                    502-562-2822
+                </p>
+            </div>
+            <div class="large-12 columns redbordertop">
+                </br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns show-for-small-only">
+                <nav class="top-bar" data-topbar>
+                    <!-- Title Area -->
+                    <ul class="title-area">
+                        <li class="name"><h1><a href="index.php">Home</a></h1></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            <div class="show-for-medium-up large-3 columns redborder textright">
+                <ul class="no-bullet" id="nav">
+                    <li> @Html.ActionLink("Home", "Home", "Home") </li>
+                    <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                    <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                    <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                    <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                    <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                    <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                    <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                    <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                </ul>
+                <div class="row">
+                    <div class="large-12 large-centered columns">
+                        <hr style="color:#ad0000;" />
+                    </div>
+                </div>
+                <ul class="vcard" style="color: #666; border:none;text-align:center;">
+                    <li style="margin-bottom:10px">Hours</li>
+                    <li><p style="text-align:left; display:inline">M-F:</p> 8:30AM - 4:30PM</li>
+                    <li><p style="text-align:left; display:inline">Sat-Sun:</p> Closed</li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--end header -->
+            <!--partners.php-->
+            <div class="large-9 columns enlargefont redborder2">
+                <div class="large-12 columns textcenter tabtitle" style="margin-bottom:25px">
+                    <h1>Our Partnerships</h1>
+                </div>
+
+                <div class="row" style="margin-bottom:20px">
+                    <div class="large-3 columns"><img src="http://uoflvaccinesandtravel.com/img/wwb-logo.JPG" alt="Water With Blessings Logo" /></div>
+                    <div class="large-9 columns">
+                        <h4>Water With Blessings</h4>
+                        <div class="large-9">
+                            <hr style="margin:0.5 rem" />
+                        </div>
+                        <h6><b>Clean water</b> for God's thirsty children, through an innovative model that equips mothers with home-based Sawyer filters.</h6>
+                        <h6><b>Description of partnership</b>:  Clinic clients may purchase high-quality personal water filtration devices with a U of L water bottle.  The purchase enables Water With Blessings to equip more mothers with  larger, long-lasting family-size filters.  The mothers "pay it forward" by filtering for other families.  That's why we call it Water With Blessings!</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-9 columns">
+                        <h6><b>Why do we partner?</b> Travelers are often at a high risk for water-borne illness, even when they have access to bottled water.  Children are more likely to die by the same illnesses than by any other cause.  This partnership allows travelers to assure their own water security, while bringing the blessing of clean water to children and their families in the developing world. </h6>
+                    </div>
+                    <div class="large-3 columns"><img src="http://uoflvaccinesandtravel.com/img/wwb-Margarita.png" alt="Margarita" /><h6 class="textcenter">Margarita</h6></div>
+                </div>
+                <!--<div class="row">
+                    <div class="large-9">
+                        <hr />
+                    </div>
+                </div> -->
+                <!--partners.php-->
+                <!-- Footer -->
+            </div>
+        </div>
+        <div class="large-12 columns height-half"></div>
+        <div class="large-12 columns redbordertop2">
+            <div class="quiet textcenter">&copy; 2011-2013 University of Louisville, Division of Infectious Diseases. All Rights Reserved.</div>
+
+            <div class="subheader textcenter">
+                Vaccine and International Travel Center<br />
+                Located in the 550 Clinic<br />
+                550 S. Jackson Street<br />
+                Ambulatory Care Building, 2nd Floor <br />
+                Louisville, KY  40202<br />
+                502-562-2822
+            </div>
+        </div>
+    </div>
+

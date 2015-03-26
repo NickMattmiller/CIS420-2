@@ -1,0 +1,50 @@
+﻿@model asp.netmvc5.Models.GrantManagerModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{
+    if (Session["GrantMessage"] != null)
+    {
+        <div class="alert alert-success alert-dismissable">@Session["GrantMessage"]</div>
+        Session["GrantMessage"] = null;
+    }
+}
+<h2></h2>
+
+<div>
+    <h4>GrantManagerModel</h4>
+    <hr/>
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Grant_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grant_Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Grant_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Grant_Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+    </dl>
+</div>
+
+@Html.Action("GrantFilesPartial", "GrantManagerModels", new {GrantDescription = Model.Grant_Description})
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

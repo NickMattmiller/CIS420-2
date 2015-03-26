@@ -1,0 +1,172 @@
+﻿@{
+    ViewBag.Title = "Home Controller";
+}
+
+@Styles.Render("~/Content/normalize.css")
+@Styles.Render("~/Content/foundation.css")
+@Styles.Render("~/Content/local.css")
+
+<div class="row contain">
+    <div class="large-12 columns">
+        <div class="row" style="padding-top:15px">
+            <div class="show-for-medium-up large-6 columns">
+                <a href="index.php"><img src="http://uoflvaccinesandtravel.com/images/logo.png" alt="logo" /> </a>
+                <p>
+                    <span class="subheader">VACCINE AND INTERNATIONAL TRAVEL CENTER</span>
+                </p>
+            </div>
+            <div class="show-for-medium-up large-6 columns">
+                <p class="subheader" style="text-align:right">
+                    Vaccine and International Travel Center<br />
+                    Located in the 550 Clinic<br />
+                    550 S. Jackson Street<br />
+                    Ambulatory Care Building, 2nd Floor<br />
+                    Louisville, KY  40202<br />
+                    502-562-2822
+                </p>
+            </div>
+            <div class="large-12 columns redbordertop">
+                </br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns show-for-small-only">
+                <nav class="top-bar" data-topbar>
+                    <!-- Title Area -->
+                    <ul class="title-area">
+                        <li class="name"><h1><a href="index.php">Home</a></h1></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            <div class="show-for-medium-up large-3 columns redborder textright">
+                <ul class="no-bullet" id="nav">
+                    <li> @Html.ActionLink("Home", "Home", "Home") </li>
+                    <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                    <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                    <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                    <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                    <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                    <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                    <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                    <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                </ul>
+                <div class="row">
+                    <div class="large-12 large-centered columns">
+                        <hr style="color:#ad0000;" />
+                    </div>
+                </div>
+                <ul class="vcard" style="color: #666; border:none;text-align:center;">
+                    <li style="margin-bottom:10px">Hours</li>
+                    <li><p style="text-align:left; display:inline">M-F:</p> 8:30AM - 4:30PM</li>
+                    <li><p style="text-align:left; display:inline">Sat-Sun:</p> Closed</li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--end header -->
+            <!--about.php-->
+
+            <div class="large-9 columns enlargefont redborder2">
+                <div class="large-12 columns textcenter tabtitle" style="margin-bottom:25px">
+                    <h1>About Us</h1>
+                </div>
+
+                <p class="justify adjustheader">
+                    Our Vaccine and International Travel Center staff are specialists in vaccinology,
+                    immunization procedures, infectious diseases, infection prevention and control, public
+                    and global health.  Broad-scoped expertise and attention to detail sets us apart from all others.
+                    Access to language lines as well as staff who speak multiple languages are value-added services.
+                </p>
+                <ul class="pics small-block-grid-3">
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Ramirez_Julio_lab.jpg" class="profilepic" /></br>
+                        Julio A. Ramirez MD, Medical Director
+                    </li>
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Carrico_Ruth_lab.jpg" class="profilepic" /></br>
+                        Ruth Carrico PhD RN FSHEA CIC, Clinic Director
+                    </li>
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Christensen_Diana_lab.jpg" class="profilepic" /></br>
+                        Diana Christensen MD
+                    </li>
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Peyrani_Paula_lab.jpg" class="profilepic" /></br>
+                        Paula Peyrani MD
+                    </li>
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Arnold_Forrest_lab.jpg" class="profilepic" /></br>
+                        Forest Arnold DO
+                    </li>
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Wiemken_Timothy_lab.jpg" class="profilepic" /></br>
+                        Timothy Wiemken PhD MPH CIC
+                    </li>
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Westhusino_Kelly_lab.jpg" class="profilepic" /></br>
+                        Kelly Westhusing MPH CPH
+                    </li>
+                    <li>
+                        <img src="http://uoflvaccinesandtravel.com/Pictures2/Ford_Rebecca_lab.jpg" class="profilepic" /></br>
+                        Rebecca Ford MPH
+                    </li>
+                </ul>
+
+                <div class="large-12 columns textcenter tabtitle" style="margin-bottom:25px">
+                    <h1>Location</h1>
+                </div>
+                <p class="justify">
+                    We are located at 550 S. Jackson Street in downtown Louisville on the second floor of the University of Louisville Ambulatory Care Building in the 550 clinic. For specific directions, click <a href="https://maps.google.com/maps?q=401+East+Chestnut+Street&hl=en&ll=38.249707,-85.746746&spn=0.038218,0.084543&sll=38.250348,-85.742798&sspn=0.019109,0.042272&hnear=401+E+Chestnut+St,+Louisville,+Kentucky+40202&t=m&z=14&iwloc=A" target="_blank">
+                        here
+                    </a> for Google assistance.
+                </p>
+                <p class="justify">
+                    Parking is conveniently located in the parking garage that is connected to the Ambulatory Care Building.  Handicap parking is available by the elevators on levels one and two of the garage.   A walkway on the second level of the garage takes you directly to the entrance of the Ambulatory Care Building.  Turn right, then follow the signs to the 550 Clinic Vaccine and International Health and Travel Center.  If you prefer on-street parking, there are meters located on Chestnut and Floyd Streets that offer up to four hours for parking.
+                </p>
+                <p class="justify">
+                    While you are here receiving immunization, you can also fill prescriptions at the outpatient pharmacy and even purchase travel-related items suggested by the Centers for Disease Control and Prevention (CDC).
+                </p>
+                <div class="textcenter">
+                    <a href="contact.php" class="button">How to Contact Us</a>
+                </div>
+
+                <!--about.php-->
+                <!-- Footer -->
+            </div>
+        </div>
+        <div class="large-12 columns height-half"></div>
+        <div class="large-12 columns redbordertop2">
+            <div class="quiet textcenter">&copy; 2011-2013 University of Louisville, Division of Infectious Diseases. All Rights Reserved.</div>
+
+            <div class="subheader textcenter">
+                Vaccine and International Travel Center<br />
+                Located in the 550 Clinic<br />
+                550 S. Jackson Street<br />
+                Ambulatory Care Building, 2nd Floor <br />
+                Louisville, KY  40202<br />
+                502-562-2822
+            </div>
+        </div>
+    </div>
+

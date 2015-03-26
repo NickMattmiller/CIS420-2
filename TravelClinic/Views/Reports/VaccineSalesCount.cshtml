@@ -1,0 +1,100 @@
+﻿@model IEnumerable<asp.netmvc5.Models.VaccineNDCGroup>
+
+@{
+    ViewBag.Title = "VaccineSalesCount";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@section Scripts {
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/jquery.dataTables.min.js")
+    @Scripts.Render("~/Scripts/dataTables.bootstrap.js")
+    @Styles.Render("~/Content/dataTables.bootstrap.css")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#reports').DataTable();
+        });</script>
+}
+@*<script type="text/javascript">
+        $(document).ready(function () {
+            var table = $('#reports').DataTable(); {
+                function() {
+                    "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                        switch (aData[0]) {
+                            case 'AAAA':
+                                $(nRow).css('background-color', 'red')
+                                break;
+                            case 'BBBB':
+                                $(nRow).css('color', 'green')
+                                break;
+                            case 'CCCC':
+                                $(nRow).css('color', 'blue')
+                                break;
+                                return nRow;
+                        }
+                    }
+                }
+            }
+        );
+    </script>*@
+
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="#">@Html.ActionLink("Administer Vaccines", "Index", "Patient_Vaccination")</li>
+    <li role="presentation" class="#">@Html.ActionLink("Inventory", "Index", "Vaccines")</li>
+    <li role="presentation" class="#">@Html.ActionLink("CDC Data", "Index", "NDC_Lookup")</li>
+    <li role="presentation" class="active">@Html.ActionLink("Reports", "Index", "Reports")</li>
+
+</ul>
+<br />
+<h2>Sales Count</h2>
+<ul class="nav nav-tabs">
+    <li role="presentation" class="#">@Html.ActionLink("Inventory", "Index", "Reports")</li>
+    <li role="presentation" class="active">@Html.ActionLink("Sales Count", "VaccineSalesCount", "Reports")</li>
+    <li role="presentation" class="#">@Html.ActionLink("Sales Totals", "TotalSales", "Vaccines")</li>
+    <li role="presentation" class="#">@Html.ActionLink("Vaccines Sold", "Administered", "Vaccines")</li>
+</ul>
+<div class="container-fluid" width="60%">
+    <br />
+    <table id="reports" class="table table-striped table-bordered" cellspacing="0" width="60%">
+        <thead>
+            <tr>
+                <th>
+                    Quantity Sold
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    NDC_Barcode
+                </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>
+                    Quantity Sold
+                </th>
+                <th>
+                    Description
+                </th>
+                <th>
+                    NDC_Barcode
+                </th>
+            </tr>
+        </tfoot>
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>
+                    @item.VaccineCount
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Barcode_NDC)
+                </td>
+            </tr>
+        }
+    </table>
+</div>

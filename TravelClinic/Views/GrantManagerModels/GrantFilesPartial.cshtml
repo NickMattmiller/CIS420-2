@@ -1,0 +1,32 @@
+﻿@model List<FileInfo>
+
+<script>
+    function getFile(grantID, fileName) {
+        var url = '/Files/@Session["FileViewType"]/' + grantID + '/' + fileName;
+        window.location = url;
+    }
+</script>
+
+<div class="container-fluid" style="margin: 10px; border: 1px solid aquamarine;">
+    <div class="row">
+        <div class="col-md-12">
+            Grant Files
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">Name</div>
+        <div class="col-md-2">Size</div>
+        <div class="col-md-2">@Session["FileViewType"]</div>
+    </div>
+
+        @foreach (var file in Model)
+        {
+            <div class="row">
+            <div class="col-md-2">@file.Name</div>
+            <div class="col-md-2">@(file.Length/1000) KB</div>
+            <div class="col-md-2"><a href="javascript:void(0);" onclick="getFile('@(HttpUtility.UrlEncode(Session["DetailsGrantID"] != null ? Session["DetailsGrantID"].ToString() : ""))','@(HttpUtility.UrlEncode(file.Name))');" >@Session["FileViewType"]</a></div>
+            </div>
+        }
+
+</div>

@@ -1,0 +1,204 @@
+﻿@model asp.netmvc5.Models.Vaccine
+@{<link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">}
+@{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#Two_Dim_Barcode').autocomplete({
+                source: '@Url.Action("GetNDCTwo")',
+                focus: function (event, ui) {
+                    $("#Two_Dim_Barcode").val(ui.item.QRCode);
+                    return false;
+                },
+                select: function (event, ui) {
+                    $("#Description").val(ui.item.Description);
+                    $("#Brand_Name").val(ui.item.Brand_Name);
+                    $("#Package_Name").val(ui.item.Package_Name);
+                    $("#Lot_Number").val(ui.item.Lot_Number);
+                    $("#Date_Expire").val(ui.item.Date_Expire);
+
+
+                    return false;
+                },
+
+                _resizeMenu: function () {
+                    this.menu.element.outerWidth(500);
+                }
+            })
+
+            $('#Barcode_NDC').autocomplete({
+                source: '@Url.Action("GetNDC")',
+                focus: function( event, ui ) {
+                    $("#Barcode_NDC").val(ui.item.Barcode_NDC);
+                    return false;
+                },
+                select: function (event, ui) {
+                    $("#Description").val(ui.item.Description);
+                    $("#Brand_Name").val(ui.item.Brand_Name);
+                    $("#Package_Name").val(ui.item.Package_Name);
+                    return false;
+                },
+               
+                _resizeMenu: function() {
+                    this.menu.element.outerWidth( 500 );
+                }
+            })
+                .autocomplete("instance")._renderItem = function (ul, item) {
+                    return $("<li>")
+                      .append("<a>" + item.Barcode_NDC + "<br>" + item.Description + "</a>")
+                      .appendTo(ul);
+                };
+        });
+       
+             
+        $('#Description').autocomplete({
+            source: '@Url.Action("GetDescription")',
+            _resizeMenu: function () {
+                this.menu.element.outerWidth(500);
+            }
+        });
+
+           $(function() {
+              $( "#Date_Added" ).datepicker();
+           });
+           $(function () {
+               $("#Date_Expire").datepicker();
+           });
+           $(function () {
+               var d = new Date();
+
+               var month = d.getMonth() + 1;
+               var day = d.getDate();
+
+               var output = d.getFullYear() + '/' +
+                   (month < 10 ? '0' : '') + month + '/' +
+                   (day < 10 ? '0' : '') + day;
+           });
+
+           $(function () {
+
+               var myDate = new Date();
+               var prettyDate = (myDate.getMonth() + 1) + '/' + myDate.getDate() + '/' +
+                       myDate.getFullYear() + " " + myDate.getHours() + ":" + myDate.getMinutes();
+               $("#Date_Added").datepicker({ defaultDate: new Date() });
+               $("#Date_Added").val(prettyDate);
+             
+           });
+   
+    </script>
+    }
+@{
+    
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Add Inventory</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    <div class="form-horizontal">
+        <h4>Vaccine</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+       
+        <div class="form-group">
+            @Html.LabelFor(model => model.Barcode_NDC, "Barcode_NDC", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Barcode_NDC)
+                @Html.ValidationMessageFor(model => model.Barcode_NDC)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Two_Dim_Barcode, "Two_Dim_Barcode", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Two_Dim_Barcode)
+                @Html.ValidationMessageFor(model => model.Two_Dim_Barcode)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Unit_Use_Barcode_NDC, "Unit_Use_Barcode_NDC", htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Unit_Use_Barcode_NDC)
+                @Html.ValidationMessageFor(model => model.Unit_Use_Barcode_NDC)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Package_Name, "Package_Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Package_Name)
+                @Html.ValidationMessageFor(model => model.Package_Name)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Brand_Name, "Brand_Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Brand_Name)
+                @Html.ValidationMessageFor(model => model.Brand_Name)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Description)
+                @Html.ValidationMessageFor(model => model.Description)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Lot_Number, "Lot_Number", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Lot_Number)
+                @Html.ValidationMessageFor(model => model.Lot_Number)
+            </div>
+        </div>
+        
+        <div class="form-group">
+            @Html.LabelFor(model => model.Dose, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Dose)
+                @Html.ValidationMessageFor(model => model.Dose)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date_Added, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date_Added)
+                @Html.ValidationMessageFor(model => model.Date_Added)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date_Expire, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date_Expire)
+                @Html.ValidationMessageFor(model => model.Date_Expire)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Price)
+                @Html.ValidationMessageFor(model => model.Price)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,161 @@
+﻿@{
+    ViewBag.Title = "Home Controller";
+}
+
+@Styles.Render("~/Content/normalize.css")
+@Styles.Render("~/Content/foundation.css")
+@Styles.Render("~/Content/local.css")
+
+<div class="row contain">
+    <div class="large-12 columns">
+        <div class="row" style="padding-top:15px">
+            <div class="show-for-medium-up large-6 columns">
+                <a href="index.php"><img src="http://uoflvaccinesandtravel.com/images/logo.png" alt="logo" /> </a>
+                <p>
+                    <span class="subheader">VACCINE AND INTERNATIONAL TRAVEL CENTER</span>
+                </p>
+            </div>
+            <div class="show-for-medium-up large-6 columns">
+                <p class="subheader" style="text-align:right">
+                    Vaccine and International Travel Center<br />
+                    Located in the 550 Clinic<br />
+                    550 S. Jackson Street<br />
+                    Ambulatory Care Building, 2nd Floor<br />
+                    Louisville, KY  40202<br />
+                    502-562-2822
+                </p>
+            </div>
+            <div class="large-12 columns redbordertop">
+                </br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns show-for-small-only">
+                <nav class="top-bar" data-topbar>
+                    <!-- Title Area -->
+                    <ul class="title-area">
+                        <li class="name"><h1><a href="index.php">Home</a></h1></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            <div class="show-for-medium-up large-3 columns redborder textright">
+                <ul class="no-bullet" id="nav">
+                    <li> @Html.ActionLink("Home", "Home", "Home") </li>
+                    <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                    <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                    <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                    <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                    <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                    <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                    <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                    <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                </ul>
+                <div class="row">
+                    <div class="large-12 large-centered columns">
+                        <hr style="color:#ad0000;" />
+                    </div>
+                </div>
+                <ul class="vcard" style="color: #666; border:none;text-align:center;">
+                    <li style="margin-bottom:10px">Hours</li>
+                    <li><p style="text-align:left; display:inline">M-F:</p> 8:30AM - 4:30PM</li>
+                    <li><p style="text-align:left; display:inline">Sat-Sun:</p> Closed</li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--end header -->
+            <div class="large-9 columns redborder2">
+                <div class="large-12 columns" style="margin-bottom:25px">
+                    <div class="textcenter tabtitle">
+                        <h1>Welcome to the Vaccine and International Travel Center</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="large-8 large-centered columns" style="margin-bottom:25px">
+                        <img src="http://uoflvaccinesandtravel.com/img/ambulatory.jpeg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-8 large-centered columns" style="margin-bottom:25px">
+                        <h6 class="textcenter">Located in the 550 Clinic, at the U of L Ambulatory Care Building</h6>
+                    </div>
+                </div>
+
+                <div class="enlargefont">
+                    <p>
+                        Preventing illness is the cornerstone of healthcare whether at home or when traveling.
+                        At the University of Louisville, our focus is on maintaining health and wellness
+                        One of the ways we do this is by ensuring that vaccines are available and approaches to health and safety are addressed by those who specialize in immunization, travel medicine, and infection prevention.
+                        We welcome you as partners in good health.
+                    </p>
+                    <div class="flex-video"><iframe width="560" height="315" src="http://www.youtube.com/embed/rMdSDe42H-4" frameborder="0" allowfullscreen></iframe></div>
+                    <div class="boldtext justify">
+                        Located in the University of Louisville Health Care Ambulatory Care building,
+                        examples of our services include:</br></br>
+                    </div>
+                    <ul>
+                        <li>Pre-travel consultation</li>
+                        <ul>
+                            <li>Vaccines and preventive medication</li>
+                            <li>Prophylactic medication</li>
+                            <li>Personal safety during travel</li>
+                            <li>Management of chronic medical conditions during travel</li>
+                        </ul>
+                        <li>In-travel consultation</li>
+                        <ul><li>Skype and email connections</li></ul>
+                        <li>Post-travel medical consultation and care</li>
+                        <ul><li>Illness followup</li></ul>
+                        <li>Routine adult and adolescent immunization</li>
+                        <li>On-site business and school immunization events</li>
+                        <li>Healthcare personnel immunization program development and evaluation</li>
+                        <li>Immunization and physical examinations requiring a Civil Surgeon</li>
+                        <li>
+                            Ability to access the outpatient pharmacy for the filling of prescriptions or purchase
+                            travel-related items suggested by the Centers for Disease Control and Prevention (CDC)
+                        </li>
+                    </ul>
+                    Because we specialize in vaccines and immunization programs, we are confident that the scope and quality of our services exceed those provided anywhere.  We are full service, high quality, rapid access, and affordable.
+                    To learn more about us and the comprehensive services we provide, please take a look at the information included in our website.</br></br>
+                    </p>
+                </div>
+
+                <!-- Footer -->
+            </div>
+        </div>
+        <div class="large-12 columns height-half"></div>
+        <div class="large-12 columns redbordertop2">
+            <div class="quiet textcenter">&copy; 2011-2013 University of Louisville, Division of Infectious Diseases. All Rights Reserved.</div>
+
+            <div class="subheader textcenter">
+                Vaccine and International Travel Center<br />
+                Located in the 550 Clinic<br />
+                550 S. Jackson Street<br />
+                Ambulatory Care Building, 2nd Floor <br />
+                Louisville, KY  40202<br />
+                502-562-2822
+            </div>
+        </div>
+    </div>
+

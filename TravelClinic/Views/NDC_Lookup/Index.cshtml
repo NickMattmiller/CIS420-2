@@ -1,0 +1,149 @@
+﻿@model IEnumerable<asp.netmvc5.Models.NDC_Lookup>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Index";
+}
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/jquery.dataTables.min.js")
+    @Scripts.Render("~/Scripts/dataTables.bootstrap.js")
+
+    @Styles.Render("~/Content/dataTables.bootstrap.css")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#NDC_Lookups').DataTable();
+        });</script>
+
+}
+
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="#">@Html.ActionLink("Administer Vaccines", "Index", "Patient_Vaccination")</li>
+        <li role="presentation" class="#">@Html.ActionLink("Inventory", "Index", "Vaccines")</li>
+        <li role="presentation" class="active">@Html.ActionLink("CDC Data", "Index", "NDC_Lookup")</li>
+        <li role="presentation" class="#">@Html.ActionLink("Reports", "Index", "Reports")</li>
+
+    </ul>
+<br />
+    <h3>CDC Data</h3>
+<br />
+    <p>
+        @Html.ActionLink("Add Data", "Create")
+    </p>
+<br />
+        <table id="NDC_Lookups" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Barcode_NDC)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.QRCode)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Route)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Brand_Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Code_CVX)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description_CVX)
+                    </th>
+                    <th>@Html.DisplayNameFor(model => model.Description_Generic)</th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Package_Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Package_Type)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date_Updated)
+                    </th>
+                    <th>Options</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Barcode_NDC)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.QRCode)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Route)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Brand_Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Code_CVX)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description_CVX)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description_Generic)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Package_Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Package_Type)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Date_Updated)
+                    </th>
+                    <th>Options</th>
+                </tr>
+            </tfoot>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Barcode_NDC)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.QRCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Route)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Code_CVX)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description_CVX)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description_Generic)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Package_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Package_Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date_Updated)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Barcode_NDC }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Barcode_NDC }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Barcode_NDC })
+                    </td>
+                </tr>
+            }
+        </table>
+

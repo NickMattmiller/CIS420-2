@@ -1,0 +1,134 @@
+﻿@model IEnumerable<asp.netmvc5.Models.Patient_Vaccination>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Scripts {
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Scripts/jquery.dataTables.min.js")
+    @Scripts.Render("~/Scripts/dataTables.bootstrap.js")
+    @Styles.Render("~/Content/dataTables.bootstrap.css")
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#administer').DataTable();
+        });</script>
+}
+
+
+<ul class="nav nav-tabs">
+    <li role="presentation" class="active">@Html.ActionLink("Administer Vaccines", "Index", "Patient_Vaccination")</li>
+    <li role="presentation" class="#">@Html.ActionLink("Inventory", "Index", "Vaccines")</li>
+    <li role="presentation" class="#">@Html.ActionLink("CDC Data", "Index", "NDC_Lookup")</li>
+    <li role="presentation" class="#">@Html.ActionLink("Reports", "Index", "Reports")</li>
+
+
+</ul>
+<br />
+<h2>Administer Vaccines</h2>
+<br />
+
+
+<p>
+    @Html.ActionLink("Administer Vaccine", "Create")
+</p>
+<table id="NDC_Lookups" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AdministeredID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Barcode_NDC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VaccineID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RefugeeId)
+        </th>
+       
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price_Paid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Site_Administered)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date_Administered)
+        </th>
+        <th>Options</th>
+    </tr>
+        </thead>
+    <tfoot>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AdministeredID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Barcode_NDC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.VaccineID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RefugeeId)
+            </th>
+          
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price_Paid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Site_Administered)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date_Administered)
+            </th>
+            <th>Options</th>
+        </tr>
+    </tfoot>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdministeredID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Barcode_NDC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VaccineID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RefugeeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price_Paid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Site_Administered)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date_Administered)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.AdministeredID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.AdministeredID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.AdministeredID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,148 @@
+﻿@{
+    ViewBag.Title = "Home Controller";
+}
+
+@Styles.Render("~/Content/normalize.css")
+@Styles.Render("~/Content/foundation.css")
+@Styles.Render("~/Content/local.css")
+
+<div class="row contain">
+    <div class="large-12 columns">
+        <div class="row" style="padding-top:15px">
+            <div class="show-for-medium-up large-6 columns">
+                <a href="index.php"><img src="http://uoflvaccinesandtravel.com/images/logo.png" alt="logo" /> </a>
+                <p>
+                    <span class="subheader">VACCINE AND INTERNATIONAL TRAVEL CENTER</span>
+                </p>
+            </div>
+            <div class="show-for-medium-up large-6 columns">
+                <p class="subheader" style="text-align:right">
+                    Vaccine and International Travel Center<br />
+                    Located in the 550 Clinic<br />
+                    550 S. Jackson Street<br />
+                    Ambulatory Care Building, 2nd Floor<br />
+                    Louisville, KY  40202<br />
+                    502-562-2822
+                </p>
+            </div>
+            <div class="large-12 columns redbordertop">
+                </br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns show-for-small-only">
+                <nav class="top-bar" data-topbar>
+                    <!-- Title Area -->
+                    <ul class="title-area">
+                        <li class="name"><h1><a href="index.php">Home</a></h1></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            <div class="show-for-medium-up large-3 columns redborder textright">
+                <ul class="no-bullet" id="nav">
+                    <li> @Html.ActionLink("Home", "Home", "Home") </li>
+                    <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                    <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                    <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                    <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                    <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                    <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                    <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                    <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                </ul>
+                <div class="row">
+                    <div class="large-12 large-centered columns">
+                        <hr style="color:#ad0000;" />
+                    </div>
+                </div>
+                <ul class="vcard" style="color: #666; border:none;text-align:center;">
+                    <li style="margin-bottom:10px">Hours</li>
+                    <li><p style="text-align:left; display:inline">M-F:</p> 8:30AM - 4:30PM</li>
+                    <li><p style="text-align:left; display:inline">Sat-Sun:</p> Closed</li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--end header -->
+            <!--services.php-->
+            <div class="large-9 columns redborder2 enlargefont">
+                <div class="large-12 columns textcenter tabtitle" style="margin-bottom:25px">
+                    <h1>Immunization</h1>
+                </div>
+                <div class="row">
+                    <div class="large-4 large-centered columns textcentered" style="margin-bottom:25px">
+                        <img src="http://uoflvaccinesandtravel.com/images/website_pic3.jpg" width="250px" height="200px" />
+                    </div>
+                </div>
+                <p>
+                    The Vaccine and International Travel Center can provide
+                    the following vaccines to adults and adolescents:
+                </p>
+                <ul id="vaccine2">
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-hep-a.pdf" target="_blank">Hepatitis A</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-hep-b.pdf" target="_blank">Hepatatis B</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-hpv-gardasil.pdf" target="_blank">Human Papillomavirus (HPV) with Gardasil</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-hpv-cervarix.pdf" target="_blank">Human Papillomavirus (HPV) with Cervarix</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-flu.pdf" target="_blank">Influenza</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-flulive.pdf" target="_blank">Influenza (intranasal)</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-je-ixiaro.pdf" target="_blank">Japanese Encephalitis</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-mmr.pdf" target="_blank">Measles-Mumps-Rubella</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-mening.pdf" target="_blank">Meningococcal</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-ppv.pdf" target="_blank">Pneumococcal</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-ipv.pdf" target="_blank">Poliomyelitis</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-rabies.pdf" target="_blank">Rabies</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-shingles.pdf" target="_blank">Shingles</a></li>
+                    <li><a href="vis-tdap.pdf" target="_blank">Tetanus/ Diphtheria/ Pertussis</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-td-tdap.pdf" target="_blank">Tetanus</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-typhoid.pdf" target="_blank">Typhoid</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-yf.pdf" target="_blank">Yellow Fever</a></li>
+                    <li><a href="http://www.cdc.gov/vaccines/pubs/vis/downloads/vis-varicella.pdf" target="_blank">Varicella</a></li>
+            </div>
+            <p class="justify">
+                We are a state-certified yellow fever vaccine site and
+                will provide you with the required yellow card following immunization.
+            </p>
+            <div class="textcenter">
+                <a href="http://uoflvaccinesandtravel.com/services.php" class="button">More About Services</a>
+            </div>
+
+
+            <!--services.php-->
+            <!-- Footer -->
+        </div>
+    </div>
+    <div class="large-12 columns height-half"></div>
+    <div class="large-12 columns redbordertop2">
+        <div class="quiet textcenter">&copy; 2011-2013 University of Louisville, Division of Infectious Diseases. All Rights Reserved.</div>
+
+        <div class="subheader textcenter">
+            Vaccine and International Travel Center<br />
+            Located in the 550 Clinic<br />
+            550 S. Jackson Street<br />
+            Ambulatory Care Building, 2nd Floor <br />
+            Louisville, KY  40202<br />
+            502-562-2822
+        </div>
+    </div>
+</div>

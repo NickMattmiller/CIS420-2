@@ -1,0 +1,68 @@
+﻿#nav {font-size: 120%; padding: 4px;}
+#nav a{color: #666; text-decoration: none; display: block;}
+#nav a:hover{background-color: #ad0000;color: white; border-top-left-radius: 15px 15px;border-bottom-left-radius: 15px 15px; padding-right:5px}
+#vaccine {font-size: 110%; padding: 4px; font-weight: bold }
+#vaccine a{background-color:white;color: black; text-decoration: none; font-family: verdana;display: block; padding-bottom:8px;}
+#vaccine a:hover{background-color:black;color: white;
+			 border-top-left-radius: 15px 15px;border-bottom-left-radius: 15px 15px}
+#vaccine2 {font-size: 90%; padding: 4px; font-weight: bold; margin-bottom:25px; }
+#vaccine2 a{background-color:white;color: black; text-decoration: none; font-family: verdana;display: block; line-height:150%;}
+#vaccine2 a:hover{background-color:black;color: white;
+			 border-top-right-radius: 15px 15px;border-bottom-right-radius: 15px 15px}
+#nav2 {font-size: 110%; padding: 2px; font-weight: bold }
+#nav2 a{background-color:#ad0000;color: white; text-decoration: none; border:solid; border-width:1px; border-color:#999; font-family: verdana;display: block;
+			border-top-left-radius: 5px 5px;border-bottom-left-radius: 5px 5px;
+			border-top-right-radius: 5px 5px;border-bottom-right-radius: 5px 5px}
+#nav2 a:hover{background-color:black;color: white; border-top-left-radius: 5px 5px;border-bottom-left-radius: 5px 5px;
+			border-top-right-radius: 5px 5px;border-bottom-right-radius: 5px 5px}			 
+.pics li{font-size:80%; font-weight: bold; text-align:center}
+.page {padding:5px; border:solid; border-width:1px; border-color:#999; font-family: verdana;display: block;
+	border-top-left-radius: 5px 5px;border-bottom-left-radius: 5px 5px;
+	border-top-right-radius: 5px 5px;border-bottom-right-radius: 5px 5px} }
+
+.main_highlight{border-radius: 15px; color: white;text-align: center; padding: 5px; font-size: 135%; font-weight:bold; height: 100px; border: #666 solid 2px}
+.ctr_highlight{background-color: #ad0000}
+.travel_highlight{background-color: #ad0000}
+.fellow_highlight{background-color: #ad0000}
+.backgroundcolor{background-color: #FFFFFF}
+.textcenter{text-align: center}
+/*paddings */
+.headpadding{padding: 5px}
+.bottompadding {padding-top:15px;}
+/* content titles */
+.enlargefont{font-size:110%}
+.tabtitle{font-size:36px; color:black; font-family:bookman old style;}
+ .lrborder{border-left:1px solid #ad0000; border-right:1px solid #ad0000; padding-right:24px;margin-right:25px;}
+ .redborder{padding-right:15px;}
+ .redborder2{border-left:1px solid #ad0000;}
+ .redbordertop{border-top: 1px solid #ad0000;}
+ .redbordertop2{border-top: 1px solid #ad0000; padding-top:15px;}
+.redheader{color: white; background-color: #AD0000; border-top-left-radius: 15px 15px;}
+.redheader1{color: #AD0000; background-color: #AD0000;}
+.redheader2{color: white; background-color: #AD0000; border-top-left-radius: 15px 15px; border-top-right-radius: 15px 15px;}
+.adjustheader{margin-left: 15px;}
+/* content text and images */
+.justify{text-align: justify}
+.adjust{padding-left:2px;}
+.left{text-align:left}
+.floatright{float:right}
+.floatleft{float:left}
+.textcenter{text-align: center}
+.textright{text-align: right}
+.textleft{text-align: left}
+.boldtext{font-weight: bold}
+.textbold{font-weight: bold}
+.underlinetext{text-decoration:underline;}
+.normpic{height:200px; width:200px:}
+.profilepic{height: 85px; width: 70px; margin-left: auto; margin-right: auto;}
+.main_highlight a{color: white; text-decoration: none; font-family: bold; font-family: Arial, Helvetica, sans-serif}
+
+.footer{background: #FFFFFF url('../images/gray_bar.png') repeat-x right top; color: white;height: 200px;}
+.news li{list-style: none}
+body{
+	background-color:#A0A3A0
+}
+.contain{
+	background-color:white;
+}
+

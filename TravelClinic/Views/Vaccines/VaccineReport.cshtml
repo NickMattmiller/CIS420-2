@@ -1,0 +1,28 @@
+﻿@model IEnumerable<asp.netmvc5.Models.VaccineNDCGroup>
+@{
+    ViewBag.Title = "VaccineReport";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>VaccineReport</h2>
+<table>
+    <tr>
+        <th>
+            NDC
+        </th>
+        <th>
+            OnHand
+        </th>
+    </tr>
+
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Barcode_NDC)
+            </td>
+            <td>
+                @item.VaccineCount
+            </td>
+        </tr>
+    }
+    </table>

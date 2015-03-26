@@ -1,0 +1,98 @@
+﻿@model asp.netmvc5.Models.NDC_Lookup
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NDC_Lookup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Barcode_NDC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Barcode_NDC)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QRCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QRCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Route)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Route)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Brand_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Code_CVX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Code_CVX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description_CVX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description_CVX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description_Generic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description_Generic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Package_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Package_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Package_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Package_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Updated)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Updated)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Barcode_NDC }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

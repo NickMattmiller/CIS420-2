@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Calendar Page";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h2>Appointments</h2>
+    <a href="https://www.google.com/calendar/render#h%7Cmonth">Create |</a>
+    <a href="https://www.google.com/calendar/render#h%7Cmonth"> Edit |</a>
+    <a href="https://www.google.com/calendar/render#h%7Cmonth"> Delete </a>
+    <div class="row">          
+              
+            <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=2&amp;hl=en&amp;bgcolor=%23ffffff&amp;src=rgc1cvdo6skouor82dmk2tiie4%40group.calendar.google.com&amp;color=%236B3304&amp;ctz=America%2FNew_York"
+                    style=" border-width:0 " width="700" height="500" frameborder="0" scrolling="no"></iframe>
+    </div>
+</div>
+
+@section scripts{
+
+    <script type="text/javascript">
+
+
+
+
+    </script>
+
+    @Styles.Render("~/Content/css")
+  
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+
+}

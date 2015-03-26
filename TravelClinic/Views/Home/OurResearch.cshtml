@@ -1,0 +1,139 @@
+﻿@{
+    ViewBag.Title = "Home Controller";
+}
+
+@Styles.Render("~/Content/normalize.css")
+@Styles.Render("~/Content/foundation.css")
+@Styles.Render("~/Content/local.css")
+
+<div class="row contain">
+    <div class="large-12 columns">
+        <div class="row" style="padding-top:15px">
+            <div class="show-for-medium-up large-6 columns">
+                <a href="index.php"><img src="http://uoflvaccinesandtravel.com/images/logo.png" alt="logo" /> </a>
+                <p>
+                    <span class="subheader">VACCINE AND INTERNATIONAL TRAVEL CENTER</span>
+                </p>
+            </div>
+            <div class="show-for-medium-up large-6 columns">
+                <p class="subheader" style="text-align:right">
+                    Vaccine and International Travel Center<br />
+                    Located in the 550 Clinic<br />
+                    550 S. Jackson Street<br />
+                    Ambulatory Care Building, 2nd Floor<br />
+                    Louisville, KY  40202<br />
+                    502-562-2822
+                </p>
+            </div>
+            <div class="large-12 columns redbordertop">
+                </br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-12 columns show-for-small-only">
+                <nav class="top-bar" data-topbar>
+                    <!-- Title Area -->
+                    <ul class="title-area">
+                        <li class="name"><h1><a href="index.php">Home</a></h1></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+                    </ul>
+                    <section class="top-bar-section">
+                        <!-- Right Nav Section -->
+                        <ul class="right">
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                            <li class="divider"></li>
+                            <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                        </ul>
+                    </section>
+                </nav>
+            </div>
+            <div class="show-for-medium-up large-3 columns redborder textright">
+                <ul class="no-bullet" id="nav">
+                    <li> @Html.ActionLink("Home", "Home", "Home") </li>
+                    <li> @Html.ActionLink("Our Research", "OurResearch", "Home") </li>
+                    <li> @Html.ActionLink("Services", "Services", "Home") </li>
+                    <li> @Html.ActionLink("Immunization", "Immunization", "Home") </li>
+                    <li> @Html.ActionLink("Contact Us", "ContactUs", "Home") </li>
+                    <li> @Html.ActionLink("About Us", "AboutUs", "Home") </li>
+                    <li> @Html.ActionLink("Civil Surgeon", "CivilSurgeon", "Home") </li>
+                    <li> @Html.ActionLink("Our Partners", "OurPartners", "Home") </li>
+                    <li> @Html.ActionLink("Schedule Appointment", "Contact", "Home") </li>
+                </ul>
+                <div class="row">
+                    <div class="large-12 large-centered columns">
+                        <hr style="color:#ad0000;" />
+                    </div>
+                </div>
+                <ul class="vcard" style="color: #666; border:none;text-align:center;">
+                    <li style="margin-bottom:10px">Hours</li>
+                    <li><p style="text-align:left; display:inline">M-F:</p> 8:30AM - 4:30PM</li>
+                    <li><p style="text-align:left; display:inline">Sat-Sun:</p> Closed</li>
+                    <li></li>
+                </ul>
+            </div>
+            <!--end header -->
+            <!--research.php-->
+
+            <div class="large-9 columns enlargefont redborder2">
+                <div class="large-12 columns" style="margin-bottom:25px">
+                    <div class="textcenter tabtitle">
+                        <h1>Our Research</h1>
+                    </div>
+                </div>
+                <div class="large-12 columns">
+                    <p class="justify">
+                        Striving for service excellence requires that we gather knowledge from patients, customers, and the community and then link it with science and best practices. At our Vaccine and International Travel Center, our research initiatives involve all of these groups.
+                        <br /><br />The following represents a snapshot of a few of the research activities currently underway:
+                        </br>
+                    </p>
+
+                    <span style="font-weight:bold">Service Quality </br></br> </span>
+                    <p class="justify">
+                        In an effort to identify challenges our travelers experience and how well our counseling and medical services are meeting your needs, you may receive an email or phone call from one of our quality research staff.  They may ask about travel-related illness, the medication you may have taken and your perceptions of our services.  Your responses are used to make improvements in all aspects of our operation and help us in our quest for excellence and value.
+                        <br /><br />Another of our quality and performance projects involves more efficient ways of providing immunization to large groups.  Sometimes called 'mass immunization', our initiatives have helped identify newer, safer, more effective and efficient methods to immunize large groups.  In doing so, our research has resulted in cost savings and higher levels of satisfaction among those vaccinated.
+                        </br>
+                    </p>
+                    <span style="font-weight:bold">Vaccines and Immunization Acceptance </br></br> </span>
+                    <p class="justify">
+                        Understanding knowledge and attitudes regarding immunization helps us recognize what adults in our community want and value.  That knowledge also helps us focus on interventions our community wants to have readily available to them.  Some individuals seen in our clinic may be invited to participate in this study.  Participation may involve a paper and pencil survey or use of an iPad.  Researchers in our Vaccine Center have received funding from Pfizer to support this study.
+                        </br>
+                    </p>
+                    <span style="font-weight:bold">Vaccine Clinical Trials </br></br> </span>
+                    <p class="justify">
+                        The use of vaccines in disease prevention is often be life saving.  Our Vaccine Center is one of only 100 sites in the United States conducting clinical trials involving a vaccine against Clostridium difficile, an emerging infection that is capable of causing severe disease and death.  This clinical trial, that began in August 2013, involves use of a vaccine deemed so effective in early testing that it has been 'fast tracked' by the Food and Drug Administration (FDA).  Our Vaccine Center is enrolling participants in the study and will follow them for up to three years.  This vaccine will be the first one that is able to address an illness that is associated with healthcare.  Anyone who has experienced C.difficile infection, or knows someone who has, can recognize the critical importance of this particular clinical trial.
+                        <!--<br /><br />As this is a high profile clinical trial, you may want to learn more.  You can find out more about this study by visiting the study website <a href='http://ulcdiff.org'> ULCdiff.org </a> -->
+                        </br>
+                    </p>
+                </div>
+                <!--research.php-->
+                <!-- Footer -->
+            </div>
+        </div>
+        <div class="large-12 columns height-half"></div>
+        <div class="large-12 columns redbordertop2">
+            <div class="quiet textcenter">&copy; 2011-2013 University of Louisville, Division of Infectious Diseases. All Rights Reserved.</div>
+
+            <div class="subheader textcenter">
+                Vaccine and International Travel Center<br />
+                Located in the 550 Clinic<br />
+                550 S. Jackson Street<br />
+                Ambulatory Care Building, 2nd Floor <br />
+                Louisville, KY  40202<br />
+                502-562-2822
+            </div>
+        </div>
+    </div>
+

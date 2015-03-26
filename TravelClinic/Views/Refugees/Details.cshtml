@@ -1,0 +1,81 @@
+﻿@model asp.netmvc5.Models.Refugee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Refugee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RefugeeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RefugeeId)
+        </dd>
+        <dt>
+            <label>2D Barcode</label>
+        </dt>
+
+        <dd>
+            <img src="/Refugees/BarcodeImage?barcodeText=@Html.DisplayTextFor(model => model.RefugeeId)" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Added)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Added)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Laungage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Laungage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OriginCountry)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OriginCountry)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RefugeeId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
