@@ -25,9 +25,9 @@ namespace asp.netmvc5.Models
         //{
         //    this.Vaccines = new HashSet<Vaccine>();
         //}
-        [Display(Name = "Barcode_ID")]
+    
         public int RefugeeId { get; set; }
-        //public long Patient_BarCode { get; set; }
+        public long Patient_BarCode { get; set; }
         public System.DateTime Date_Added { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -37,5 +37,4 @@ namespace asp.netmvc5.Models
     
         public virtual ICollection<Patient_Vaccination> Patient_Vaccinations { get; set; }
     }
-
 }

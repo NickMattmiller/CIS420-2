@@ -50,73 +50,14 @@ namespace asp.netmvc5.Controllers
                            ).ToList();
             return View(vaccines.ToList());
         }
+       
 
-        public ActionResult GetNDCTwo (string term)
-        {
-            string date = term.Substring(18,6);
-            date = date.Insert(0, "20");
-            date = date.Insert(4, "/");
-            date = date.Insert(7, "/");
-
-
-            string lot = term.Substring(26,7);
-            string termt = term;
-            string termtt;
-
-                termt = term.Remove(0, 5);
-                termtt = termt.Remove(8,20);
-
-            var result =
-             from r in db.NDC_Lookup
-             where r.QRCode.Contains(termtt)
-             select new { Description = r.Description_CVX, Package_Name = r.Package_Name, Brand_Name = r.Brand_Name, Barcode_NDC = r.Barcode_NDC.ToString(), QRCode = r.QRCode.ToString(), Lot_Number = lot , Date_Expire = date};
-
-            return Json(result, JsonRequestBehavior.AllowGet);
-
-        }
         public ActionResult GetNDC(string term)
         {
-
-
-            //if(term.Length >= 18)
-            //{
-            //    string twodndc = "0";
-
-            //    twodndc = term.Remove(0, 9);
-            //    twodndc = term.Remove(13, 17);
-            //    term = twodndc;
-            //}
-            if (term.StartsWith("3"))
-            {
-                term = term.Remove(0, 1);
-                term = term.Remove(10, 1);
-            }
-
-            //if(term.IndexOf(0,4 ,1).) 
-            if (!term.StartsWith("00"))
-            {
-                term = term.Insert(5, "0");
-               
-            }
-            if (!term.StartsWith("00"))
-            {
-                term = term.Insert(5, "0");
-
-            }
-            Decimal decterm = Convert.ToDecimal(term);
-
-            var result =
-               from r in db.NDC_Lookup
-               where r.Barcode_NDC.ToString().Contains(decterm.ToString())
-               select new { Description = r.Description_CVX, Package_Name = r.Package_Name, Brand_Name = r.Brand_Name, Barcode_NDC = r.Barcode_NDC.ToString() };
-            //var result = 
-            //    db.NDC_Lookup
-            //    .Select(n => new { n, distance = Math.Abs(n.Barcode_NDC - decterm) })
-            //    .OrderBy(p => p.distance).First();
-
-            //var result2 = 
-            //     from r in result
-            //     select new { Description = r.Description_CVX, Package_Name = r.Package_Name, Brand_Name = r.Brand_Name, Barcode_NDC = r.Barcode_NDC.ToString()};
+             var result = 
+                 from r in db.NDC_Lookup
+                         where r.Barcode_NDC.ToString().Contains(term) 
+                         select new { Description = r.Description_CVX, Barcode_NDC = r.Barcode_NDC.ToString()};
 
             return Json(result ,JsonRequestBehavior.AllowGet);
         }
@@ -157,7 +98,7 @@ namespace asp.netmvc5.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin, Executive, CanEdit, Program Staff")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Two_Dim_Barcode,Unit_Use_Barcode_NDC,Brand_Name,Package_Name,Description,Barcode_NDC,Dose,Date_Added,Date_Expire,Price,Lot_Number")] Vaccine vaccine)
+        public ActionResult Create([Bind(Include = "Id,Description,Barcode_NDC,Dose,Date_Added,Date_Expire,Price")] Vaccine vaccine)
         {
             if (ModelState.IsValid)
             {
@@ -193,7 +134,7 @@ namespace asp.netmvc5.Controllers
         [HttpPost]
         [Authorize(Roles = "Admin, Executive, CanEdit, Program Staff")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,Two_Dim_Barcode,Unit_Use_Barcode_NDC,Brand_Name,Package_Name,Description,Barcode_NDC,Dose,Date_Added,Date_Expire,Price,Lot_Number")] Vaccine vaccine)
+        public ActionResult Edit([Bind(Include = "Id,Description,Barcode_NDC,Dose,Date_Added,Date_Expire,Price")] Vaccine vaccine)
         {
             if (ModelState.IsValid)
             {

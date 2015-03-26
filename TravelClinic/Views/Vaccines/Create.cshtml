@@ -3,41 +3,17 @@
 @{
     <script type="text/javascript">
         $(document).ready(function () {
-            $('#Two_Dim_Barcode').autocomplete({
-                source: '@Url.Action("GetNDCTwo")',
-                focus: function (event, ui) {
-                    $("#Two_Dim_Barcode").val(ui.item.QRCode);
-                    return false;
-                },
-                select: function (event, ui) {
-                    $("#Description").val(ui.item.Description);
-                    $("#Brand_Name").val(ui.item.Brand_Name);
-                    $("#Package_Name").val(ui.item.Package_Name);
-                    $("#Lot_Number").val(ui.item.Lot_Number);
-                    $("#Date_Expire").val(ui.item.Date_Expire);
-
-
-                    return false;
-                },
-
-                _resizeMenu: function () {
-                    this.menu.element.outerWidth(500);
-                }
-            })
-
+  
             $('#Barcode_NDC').autocomplete({
                 source: '@Url.Action("GetNDC")',
                 focus: function( event, ui ) {
                     $("#Barcode_NDC").val(ui.item.Barcode_NDC);
                     return false;
                 },
-                select: function (event, ui) {
+                select: function( event, ui ) {
                     $("#Description").val(ui.item.Description);
-                    $("#Brand_Name").val(ui.item.Brand_Name);
-                    $("#Package_Name").val(ui.item.Package_Name);
                     return false;
                 },
-               
                 _resizeMenu: function() {
                     this.menu.element.outerWidth( 500 );
                 }
@@ -48,8 +24,6 @@
                       .appendTo(ul);
                 };
         });
-       
-             
         $('#Description').autocomplete({
             source: '@Url.Action("GetDescription")',
             _resizeMenu: function () {
@@ -63,36 +37,15 @@
            $(function () {
                $("#Date_Expire").datepicker();
            });
-           $(function () {
-               var d = new Date();
-
-               var month = d.getMonth() + 1;
-               var day = d.getDate();
-
-               var output = d.getFullYear() + '/' +
-                   (month < 10 ? '0' : '') + month + '/' +
-                   (day < 10 ? '0' : '') + day;
-           });
-
-           $(function () {
-
-               var myDate = new Date();
-               var prettyDate = (myDate.getMonth() + 1) + '/' + myDate.getDate() + '/' +
-                       myDate.getFullYear() + " " + myDate.getHours() + ":" + myDate.getMinutes();
-               $("#Date_Added").datepicker({ defaultDate: new Date() });
-               $("#Date_Added").val(prettyDate);
-             
-           });
    
     </script>
     }
 @{
-    
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-<h2>Add Inventory</h2>
+<h2>Create</h2>
 
 
 @using (Html.BeginForm())
@@ -104,7 +57,6 @@
         <h4>Vaccine</h4>
         <hr />
         @Html.ValidationSummary(true)
-       
         <div class="form-group">
             @Html.LabelFor(model => model.Barcode_NDC, "Barcode_NDC", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -113,48 +65,12 @@
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(model => model.Two_Dim_Barcode, "Two_Dim_Barcode", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Two_Dim_Barcode)
-                @Html.ValidationMessageFor(model => model.Two_Dim_Barcode)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Unit_Use_Barcode_NDC, "Unit_Use_Barcode_NDC", htmlAttributes: new { @class = "control-label col-md-2"})
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Unit_Use_Barcode_NDC)
-                @Html.ValidationMessageFor(model => model.Unit_Use_Barcode_NDC)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Package_Name, "Package_Name", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.TextAreaFor(model => model.Package_Name)
-                @Html.ValidationMessageFor(model => model.Package_Name)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Brand_Name, "Brand_Name", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Brand_Name)
-                @Html.ValidationMessageFor(model => model.Brand_Name)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Description, "Description", htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Description)
                 @Html.ValidationMessageFor(model => model.Description)
             </div>
         </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Lot_Number, "Lot_Number", htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Lot_Number)
-                @Html.ValidationMessageFor(model => model.Lot_Number)
-            </div>
-        </div>
-        
         <div class="form-group">
             @Html.LabelFor(model => model.Dose, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">

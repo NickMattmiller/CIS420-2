@@ -7,11 +7,6 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using asp.netmvc5.Models;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.IO;
-using Gma.QrCodeNet.Encoding;
-using Gma.QrCodeNet.Encoding.Windows.Render;
 
 namespace asp.netmvc5.Controllers
 {
@@ -24,27 +19,6 @@ namespace asp.netmvc5.Controllers
         public ActionResult Index()
         {
             return View(db.Refugees.ToList());
-        }
-
-
-         public ActionResult BarcodeImage(String barcodeText)
-        {
-            // generating a barcode here. Code is taken from QrCode.Net library
-            QrEncoder qrEncoder = new QrEncoder(ErrorCorrectionLevel.H);
-            QrCode qrCode = new QrCode();
-            qrEncoder.TryEncode(barcodeText, out qrCode);
-            GraphicsRenderer renderer = new GraphicsRenderer(new FixedModuleSize(4, QuietZoneModules.Four), Brushes.Black, Brushes.White);
-
-            Stream memoryStream = new MemoryStream();
-            renderer.WriteToStream(qrCode.Matrix, ImageFormat.Png, memoryStream);
-
-            // very important to reset memory stream to a starting position, otherwise you would get 0 bytes returned
-            memoryStream.Position = 0;
-
-            var resultStream = new FileStreamResult(memoryStream, "image/png");
-            resultStream.FileDownloadName = String.Format("{0}.png", barcodeText);
-
-            return resultStream;
         }
 
         // GET: Refugees/Details/5
@@ -76,7 +50,7 @@ namespace asp.netmvc5.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin, Executive, CanEdit, Program Staff")]
-        public ActionResult Create([Bind(Include = "RefugeeId,Date_Added,FirstName,LastName,Laungage,OriginCountry,Gender")] Refugee refugee)
+        public ActionResult Create([Bind(Include = "RefugeeId,Patient_BarCode,Date_Added,FirstName,LastName,Laungage,OriginCountry,Gender")] Refugee refugee)
         {
             if (ModelState.IsValid)
             {
@@ -110,7 +84,7 @@ namespace asp.netmvc5.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin, Executive, CanEdit, Program Staff")]
-        public ActionResult Edit([Bind(Include = "RefugeeId,Date_Added,FirstName,LastName,Laungage,OriginCountry,Gender")] Refugee refugee)
+        public ActionResult Edit([Bind(Include = "RefugeeId,Patient_BarCode,Date_Added,FirstName,LastName,Laungage,OriginCountry,Gender")] Refugee refugee)
         {
             if (ModelState.IsValid)
             {

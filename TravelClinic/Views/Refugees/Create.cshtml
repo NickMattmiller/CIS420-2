@@ -40,10 +40,22 @@
         <h4>Refugee</h4>
         <hr />
         @Html.ValidationSummary(true)
-       
+        <div class="form-group">
+            @Html.LabelFor(model => model.Patient_BarCode, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Patient_BarCode)
+                @Html.ValidationMessageFor(model => model.Patient_BarCode)
+            </div>
+        </div>
 
-       
-       
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date_Added, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date_Added)
+                @Html.ValidationMessageFor(model => model.Date_Added)
+            </div>
+        </div>
+
         <div class="form-group">
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -81,13 +93,6 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Gender)
                 @Html.ValidationMessageFor(model => model.Gender)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(model => model.Date_Added, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Date_Added)
-                @Html.ValidationMessageFor(model => model.Date_Added)
             </div>
         </div>
 
