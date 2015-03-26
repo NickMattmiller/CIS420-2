@@ -65,25 +65,26 @@
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Gma.QrCodeNet.Encoding">
-      <HintPath>packages\QrCode.Net.0.4.0.0\lib\net45\Gma.QrCodeNet.Encoding.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Microsoft.AspNet.Identity.Core.2.2.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Microsoft.AspNet.Identity.EntityFramework.2.2.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Microsoft.AspNet.Identity.Owin.2.2.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -142,6 +143,7 @@
     <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -231,22 +233,9 @@
     <Compile Include="Migrations\201503181943289_appdbb.Designer.cs">
       <DependentUpon>201503181943289_appdbb.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201503232131327_twod.cs" />
-    <Compile Include="Migrations\201503232131327_twod.Designer.cs">
-      <DependentUpon>201503232131327_twod.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503240311310_norefbar.cs" />
-    <Compile Include="Migrations\201503240311310_norefbar.Designer.cs">
-      <DependentUpon>201503240311310_norefbar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201503240322453_norefbar2.cs" />
-    <Compile Include="Migrations\201503240322453_norefbar2.Designer.cs">
-      <DependentUpon>201503240322453_norefbar2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Calendar.cs" />
-    <Compile Include="Models\NDC_Lookup_Unit_Use.cs" />
     <Compile Include="Models\FAQ.cs" />
     <Compile Include="Models\GrantManagerModel.cs" />
     <Compile Include="Models\Helpers\MimeTypes.cs" />
@@ -539,15 +528,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201503181943289_appdbb.resx">
       <DependentUpon>201503181943289_appdbb.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503232131327_twod.resx">
-      <DependentUpon>201503232131327_twod.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503240311310_norefbar.resx">
-      <DependentUpon>201503240311310_norefbar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201503240322453_norefbar2.resx">
-      <DependentUpon>201503240322453_norefbar2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

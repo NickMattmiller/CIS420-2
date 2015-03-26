@@ -21,6 +21,7 @@ namespace asp.netmvc5.Models
             public int VaccineID { get; set; }
             [ForeignKey("Refugees")]
             public int RefugeeId { get; set; }
+            public int Patient_Num { get; set; }
             [Display(Name = "Employee")]
             [ForeignKey("User")]
             public string UserName { get; set; }

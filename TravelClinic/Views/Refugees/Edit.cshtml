@@ -10,33 +10,20 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-
+    
     <div class="form-horizontal">
         <h4>Refugee</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.RefugeeId)
 
-
-
         <div class="form-group">
-            @Html.LabelFor(model => model.RefugeeId, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.Patient_BarCode, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DisplayTextFor(model => model.RefugeeId)
-
-            </div>
-
-        </div>
-        <div class="form-group">
-            <label class="control-label col-md-2">2D Barcode</label>
-            <br />
-            <img src="/Refugees/BarcodeImage?barcodeText=@Html.DisplayTextFor(model => model.RefugeeId)" />
-
-            <div class="col-md-10">
+                @Html.EditorFor(model => model.Patient_BarCode)
+                @Html.ValidationMessageFor(model => model.Patient_BarCode)
             </div>
         </div>
-
-
 
         <div class="form-group">
             @Html.LabelFor(model => model.Date_Added, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -45,7 +32,6 @@
                 @Html.ValidationMessageFor(model => model.Date_Added)
             </div>
         </div>
-       
 
         <div class="form-group">
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })

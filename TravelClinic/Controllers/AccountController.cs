@@ -10,7 +10,6 @@ using AspNetRoleBasedSecurity.Models;
 
 namespace AspNetRoleBasedSecurity.Controllers
 {
-    [Authorize]
     public class AccountController : Controller
     {
         public AccountController()
@@ -28,7 +27,6 @@ namespace AspNetRoleBasedSecurity.Controllers
         public UserManager<ApplicationUser> UserManager { get; private set; }
 
 
-        [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -37,7 +35,6 @@ namespace AspNetRoleBasedSecurity.Controllers
 
 
         [HttpPost]
-        [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
@@ -87,8 +84,7 @@ namespace AspNetRoleBasedSecurity.Controllers
             return View(model);
         }
 
-
-        [AllowAnonymous]
+        [Authorize(Roles = "Admin, Executive, CanEdit, Researcher, Program Staff, Medical Staff, OnlineRegistration")]
         public ActionResult Manage(ManageMessageId? message)
         {
             ViewBag.StatusMessage =
@@ -104,8 +100,8 @@ namespace AspNetRoleBasedSecurity.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles = "Admin, Executive, CanEdit, Researcher, Program Staff, Medical Staff, OnlineRegistration")]
         [ValidateAntiForgeryToken]
-        [AllowAnonymous]
         public async Task<ActionResult> Manage(ManageUserViewModel model)
         {
             bool hasPassword = HasPassword();

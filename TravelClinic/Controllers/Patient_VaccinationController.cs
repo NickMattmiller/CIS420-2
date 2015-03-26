@@ -43,24 +43,6 @@ namespace asp.netmvc5.Controllers
         }
         public ActionResult GetNDC(string term)
         {
-            if (term.StartsWith("3"))
-            {
-                term = term.Remove(0, 1);
-                term = term.Remove(10, 1);
-            }
-
-            //if(term.IndexOf(0,4 ,1).) 
-            if (!term.StartsWith("00"))
-            {
-                term = term.Insert(5, "0");
-
-            }
-            if (term.StartsWith("000"))
-            {
-                term = term.Remove(0,3);
-
-            }
-
             var result =
                 from r in db.Vaccines
                 where r.Barcode_NDC.ToString().Contains(term) && r.Administered.Equals(false)
