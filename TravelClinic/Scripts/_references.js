@@ -15,5 +15,5 @@
 /// <reference path="modernizr-2.6.2.js" />
 /// <reference path="respond.min.js" />
 /// <reference path="respond.matchmedia.addlistener.min.js" />
-/// <reference path="../packages/bootstrap.3.3.2/content/scripts/bootstrap.js" />
 /// <reference path="../packages/bootstrap.3.3.2/content/scripts/npm.js" />
+/// <reference path="../packages/bootstrap.3.3.2/content/scripts/bootstrap.min.js" />

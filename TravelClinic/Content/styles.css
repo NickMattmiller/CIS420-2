@@ -1,0 +1,28 @@
+﻿
+body {
+    font-family: 'Khula', sans-serif;
+    font-size: 18px;
+    line-height: 1.42857143;
+    color: #000000;
+    background-color: #E5E5E5;
+}
+h2, h3 {
+    color: #CC0000;
+    font-family: 'Cinzel', serif;
+    font-weight: bolder;
+}
+a {
+    font-weight: bold;
+    color: #00005C
+}
+#vaccine_wrapper {
+    background-color: #A9A9A9;
+
+}
+.table-bordered {
+    color: black;
+}
+.table {
+    color: #000000;
+    background-color: #A9A9A9;
+}

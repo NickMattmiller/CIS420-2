@@ -272,6 +272,7 @@
     <Content Include="Content\jquery.dataTables.css" />
     <Content Include="Content\local.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\styles.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />
@@ -316,6 +317,7 @@
     <Content Include="images\forward_disabled.png" />
     <Content Include="images\forward_enabled.png" />
     <Content Include="images\forward_enabled_hover.png" />
+    <Content Include="images\LouCards1.jpg" />
     <Content Include="images\sort_asc.png" />
     <Content Include="images\sort_asc_disabled.png" />
     <Content Include="images\sort_both.png" />
@@ -382,6 +384,21 @@
     <Content Include="packages\bootstrap.3.3.2\content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="packages\bootstrap.3.3.2\content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="packages\bootstrap.3.3.2\content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\Cinzel-Black.ttf" />
+    <Content Include="fonts\Cinzel-Bold.ttf" />
+    <Content Include="fonts\Cinzel-Regular.ttf" />
+    <Content Include="fonts\CinzelDecorative-Black.ttf" />
+    <Content Include="fonts\CinzelDecorative-Bold.ttf" />
+    <Content Include="fonts\CinzelDecorative-Regular.ttf" />
+    <Content Include="fonts\Khula-Bold.ttf" />
+    <Content Include="fonts\Khula-ExtraBold.ttf" />
+    <Content Include="fonts\Khula-Light.ttf" />
+    <Content Include="fonts\Khula-Regular.ttf" />
+    <Content Include="fonts\Khula-SemiBold.ttf" />
+    <Content Include="fonts\Amiri-Bold.ttf" />
+    <Content Include="fonts\Amiri-BoldSlanted.ttf" />
+    <Content Include="fonts\Amiri-Regular.ttf" />
+    <Content Include="fonts\Amiri-Slanted.ttf" />
     <None Include="Properties\PublishProfiles\cis420 - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\cis420 - FTP %283%29.pubxml" />
     <None Include="Properties\PublishProfiles\cis420 - FTP %284%29.pubxml" />
